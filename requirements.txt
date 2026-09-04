@@ -1,0 +1,11 @@
+torch
+spikingjelly
+cupy-cuda12x
+numpy
+scipy
+matplotlib
+pandas
+tqdm
+requests
+jupyterlab
+ipykernel

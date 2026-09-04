@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# 数据文件体积较大，由 src/data_prepare 中的 notebook 生成，不纳入版本控制
+/CapgMyo_data/**/*.pt
+/CapgMyo_data/**/*.zip
+
+# 训练时按需编译的 CUDA 扩展与构建缓存
+*.so
+build/
