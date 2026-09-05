@@ -43,7 +43,7 @@ def write_comparison(rows):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     fieldnames = [
-        "data_type", "label", "test_accuracy", "test_correct", "test_total",
+        "data_type", "name", "label", "test_accuracy", "test_correct", "test_total",
         "best_val_accuracy", "parameter_count",
     ]
     with (output_dir / "comparison.csv").open("w", newline="", encoding="utf-8-sig") as file:

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "url_public_html": "https://figshare.com/articles/dataset/Data_from_Gesture_Recognition_by_Instantaneous_Surface_EMG_Images_CapgMyo-DBa/7210397/1",
   "files": [
@@ -333,4 +334,341 @@
   },
   "resource_title": null,
   "resource_doi": null
+=======
+{
+  "url_public_html": "https://figshare.com/articles/dataset/Data_from_Gesture_Recognition_by_Instantaneous_Surface_EMG_Images_CapgMyo-DBa/7210397/1",
+  "files": [
+    {
+      "id": 13277105,
+      "name": "dba-s1.zip",
+      "size": 78413147,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13277105",
+      "supplied_md5": "ee30c5235d817e3c96492aff01fc9423",
+      "computed_md5": "ee30c5235d817e3c96492aff01fc9423",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13275896,
+      "name": "dba-s2.zip",
+      "size": 78482918,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13275896",
+      "supplied_md5": "63a0dbf3f6387097d957a9cdca2182c9",
+      "computed_md5": "63a0dbf3f6387097d957a9cdca2182c9",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13275953,
+      "name": "dba-s3.zip",
+      "size": 78342973,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13275953",
+      "supplied_md5": "cef147a5a0a0be71f9da30d15461dbb3",
+      "computed_md5": "cef147a5a0a0be71f9da30d15461dbb3",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13275962,
+      "name": "dba-s4.zip",
+      "size": 78178750,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13275962",
+      "supplied_md5": "21bf535d25369b1c1cda33d582105df8",
+      "computed_md5": "21bf535d25369b1c1cda33d582105df8",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13275965,
+      "name": "dba-s5.zip",
+      "size": 78434204,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13275965",
+      "supplied_md5": "397a6fd60c7c63e5a6e6254957435b35",
+      "computed_md5": "397a6fd60c7c63e5a6e6254957435b35",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13275983,
+      "name": "dba-s6.zip",
+      "size": 78160828,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13275983",
+      "supplied_md5": "9e16e3686e9620da3d6be980b7b1e4e0",
+      "computed_md5": "9e16e3686e9620da3d6be980b7b1e4e0",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276016,
+      "name": "dba-s7.zip",
+      "size": 78419193,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276016",
+      "supplied_md5": "0689e978553f3ba1a32d124fca097fad",
+      "computed_md5": "0689e978553f3ba1a32d124fca097fad",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276019,
+      "name": "dba-s8.zip",
+      "size": 78374934,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276019",
+      "supplied_md5": "6bc3a96a4312dab93b1a198df2c63b59",
+      "computed_md5": "6bc3a96a4312dab93b1a198df2c63b59",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276022,
+      "name": "dba-s9.zip",
+      "size": 78306564,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276022",
+      "supplied_md5": "743deeded248e00c0faee2d86c4b3e6d",
+      "computed_md5": "743deeded248e00c0faee2d86c4b3e6d",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276934,
+      "name": "dba-s10.zip",
+      "size": 78437109,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276934",
+      "supplied_md5": "c8fe5aa7e61d44d25ac086852123aa60",
+      "computed_md5": "c8fe5aa7e61d44d25ac086852123aa60",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13277147,
+      "name": "dba-s11.zip",
+      "size": 78389841,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13277147",
+      "supplied_md5": "74382cc1927835c731b1305d4a3f6501",
+      "computed_md5": "74382cc1927835c731b1305d4a3f6501",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13277000,
+      "name": "dba-s12.zip",
+      "size": 78435013,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13277000",
+      "supplied_md5": "ec92802ea6a9e656805895fc8b5016f9",
+      "computed_md5": "ec92802ea6a9e656805895fc8b5016f9",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13277015,
+      "name": "dba-s13.zip",
+      "size": 78431118,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13277015",
+      "supplied_md5": "a29e85b204168fccb8104922ca9c01ae",
+      "computed_md5": "a29e85b204168fccb8104922ca9c01ae",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13277027,
+      "name": "dba-s14.zip",
+      "size": 78429745,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13277027",
+      "supplied_md5": "574845abe6de997158f82f19d6ab03cb",
+      "computed_md5": "574845abe6de997158f82f19d6ab03cb",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276136,
+      "name": "dba-s15.zip",
+      "size": 78140359,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276136",
+      "supplied_md5": "c1e85885f2c14dd41e22de90ab771a29",
+      "computed_md5": "c1e85885f2c14dd41e22de90ab771a29",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276139,
+      "name": "dba-s16.zip",
+      "size": 78438262,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276139",
+      "supplied_md5": "c742e7d0f2b45bbe45b1f7e5bb5bf9c5",
+      "computed_md5": "c742e7d0f2b45bbe45b1f7e5bb5bf9c5",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276142,
+      "name": "dba-s17.zip",
+      "size": 77926359,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276142",
+      "supplied_md5": "c638a7ffe355be522b1f0f4e4e1bb799",
+      "computed_md5": "c638a7ffe355be522b1f0f4e4e1bb799",
+      "mimetype": "application/zip"
+    },
+    {
+      "id": 13276148,
+      "name": "dba-s18.zip",
+      "size": 78138642,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/13276148",
+      "supplied_md5": "386a49bf4f6a8c86135d259d7a26d591",
+      "computed_md5": "386a49bf4f6a8c86135d259d7a26d591",
+      "mimetype": "application/zip"
+    }
+  ],
+  "folder_structure": {},
+  "authors": [
+    {
+      "id": 5858237,
+      "full_name": "Weidong Geng",
+      "first_name": "Weidong",
+      "last_name": "Geng",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": ""
+    },
+    {
+      "id": 618167,
+      "full_name": "Yu Du",
+      "first_name": "Yu",
+      "last_name": "Du",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": ""
+    },
+    {
+      "id": 5858240,
+      "full_name": "Wenguang Jin",
+      "first_name": "Wenguang",
+      "last_name": "Jin",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": ""
+    },
+    {
+      "id": 2135263,
+      "full_name": "Wentao Wei",
+      "first_name": "Wentao",
+      "last_name": "Wei",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": ""
+    },
+    {
+      "id": 126677,
+      "full_name": "Yu Hu",
+      "first_name": "Yu",
+      "last_name": "Hu",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": ""
+    },
+    {
+      "id": 1410187,
+      "full_name": "Jiajun Li",
+      "first_name": "Jiajun",
+      "last_name": "Li",
+      "is_active": false,
+      "url_name": "_",
+      "orcid_id": ""
+    }
+  ],
+  "custom_fields": [],
+  "figshare_url": "https://figshare.com/articles/dataset/Data_from_Gesture_Recognition_by_Instantaneous_Surface_EMG_Images_CapgMyo-DBa/7210397",
+  "download_disabled": false,
+  "description": "Our CapgMyo database includes HD-sEMG data for 128 channels acquired from 23 intact subjects by using our newly developed acquisition device. The acquisition device has a matrix-type (8×16) differential electrode array with silver wet electrodes. The CapgMyo database consists of 3 sub-databases (DB-a, DB-b and DB-c); 8 isometric and isotonic hand gestures were obtained from 18 of the 23 subjects in DB-a. When using this data, please cite the publication: Geng W, Du Y, Jin W, et al. Gesture recognition by instantaneous surface EMG images[J]. Scientific reports, 2016, 6: 36571.<br>",
+  "funding": null,
+  "funding_list": [],
+  "version": 1,
+  "status": "public",
+  "size": 1409879959,
+  "created_date": "2018-10-16T13:44:21Z",
+  "modified_date": "2023-05-31T14:55:11Z",
+  "is_public": true,
+  "is_confidential": false,
+  "is_metadata_record": false,
+  "confidential_reason": "",
+  "metadata_reason": "",
+  "license": {
+    "value": 2,
+    "name": "CC0",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "tags": [
+    "Surface EMG signals",
+    "gesture recognition research",
+    "Deep Learning Neural Networks",
+    "Computer-Human Interaction"
+  ],
+  "keywords": [
+    "Surface EMG signals",
+    "gesture recognition research",
+    "Deep Learning Neural Networks",
+    "Computer-Human Interaction"
+  ],
+  "categories": [
+    {
+      "id": 29056,
+      "title": "Human-computer interaction",
+      "parent_id": 29038,
+      "path": "/28798/29038/29056",
+      "source_id": "460806",
+      "taxonomy_id": 100
+    }
+  ],
+  "references": [
+    "http://zju-capg.org/myo/",
+    "https://doi.org/10.1038/srep36571"
+  ],
+  "has_linked_file": false,
+  "citation": "Geng, Weidong; Du, Yu; Jin, Wenguang; Wei, Wentao; Hu, Yu; Li, Jiajun (2018). Data from: Gesture Recognition by Instantaneous Surface EMG Images  CapgMyo-DBa. figshare. Dataset. https://doi.org/10.6084/m9.figshare.7210397.v1",
+  "related_materials": [
+    {
+      "id": 12020012,
+      "identifier": "http://zju-capg.org/myo/",
+      "title": "",
+      "relation": "References",
+      "identifier_type": "URL",
+      "is_linkout": false,
+      "link": "http://zju-capg.org/myo/"
+    },
+    {
+      "id": 12020024,
+      "identifier": "https://doi.org/10.1038/srep36571",
+      "title": "",
+      "relation": "References",
+      "identifier_type": "URL",
+      "is_linkout": false,
+      "link": "https://doi.org/10.1038/srep36571"
+    }
+  ],
+  "is_embargoed": false,
+  "embargo_date": null,
+  "embargo_type": "file",
+  "embargo_title": "",
+  "embargo_reason": "",
+  "embargo_options": [],
+  "id": 7210397,
+  "title": "Data from: Gesture Recognition by Instantaneous Surface EMG Images  CapgMyo-DBa",
+  "doi": "10.6084/m9.figshare.7210397.v1",
+  "handle": "",
+  "url": "https://api.figshare.com/v2/articles/7210397",
+  "published_date": "2018-10-16T13:44:21Z",
+  "thumb": "",
+  "defined_type": 3,
+  "defined_type_name": "dataset",
+  "group_id": null,
+  "url_private_api": "https://api.figshare.com/v2/account/articles/7210397",
+  "url_public_api": "https://api.figshare.com/v2/articles/7210397",
+  "url_private_html": "https://figshare.com/account/articles/7210397",
+  "timeline": {
+    "posted": "2018-10-16T13:44:21",
+    "firstOnline": "2018-10-16"
+  },
+  "resource_title": null,
+  "resource_doi": null
+>>>>>>> 22255226ce67c71d1ac59b490620baefb1efa80f
 }

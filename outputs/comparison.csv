@@ -1,0 +1,6 @@
+﻿data_type,name,label,test_accuracy,test_correct,test_total,best_val_accuracy,parameter_count
+delta_spike,Delta spike,Delta 编码脉冲,0.8784722222222222,253,288,0.8819444444444444,571486
+neurophic_system_spike,Neuromorphic spike,神经形态系统脉冲编码,0.9201388888888888,265,288,0.9166666666666666,571486
+raw_polarity,Raw polarity,raw_polarity（无归一化）,0.9305555555555556,268,288,0.9444444444444444,571486
+raw_polarity_norm,Raw polarity (z-score),raw_polarity（z-score 归一化）,0.9340277777777778,269,288,0.9444444444444444,571486
+threshold_spike,Threshold spike,Threshold 编码脉冲,0.8958333333333334,258,288,0.9027777777777778,571486
