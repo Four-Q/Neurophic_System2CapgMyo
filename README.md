@@ -6,11 +6,11 @@
 
 | 输入 | 数据目录 | dtype | 目标测试准确率 |
 | --- | --- | --- | ---: |
-| 原始极性数据（无归一化） | `raw_polarity_binned/T_200/raw_polarity` | float32 | 95.83% |
-| 原始极性数据（z-score 归一化） | `raw_polarity_binned/T_200/raw_polarity` | float32 | 95.14% |
-| 神经形态系统脉冲编码（Vin 输入） | `neurophic_system_encoding_spike/T_200/raw_polarity` | bool | 92.36% |
-| Delta 编码脉冲 | `delta_encoding_spike/T_200_target_rate0.1/raw_polarity` | bool | 85.07% |
-| Threshold 编码脉冲 | `threshold_encoding_spike/T_200_target_rate0.1/raw_polarity` | bool | 86.11% |
+| 原始极性数据（无归一化） | `raw_polarity_binned/T_200` | float32 | 95.83% |
+| 原始极性数据（z-score 归一化） | `raw_polarity_binned/T_200` | float32 | 95.14% |
+| 神经形态系统脉冲编码（Vin 输入） | `neurophic_system_encoding_spike/T_200` | bool | 92.36% |
+| Delta 编码脉冲 | `delta_encoding_spike/T_200` | bool | 85.07% |
+| Threshold 编码脉冲 | `threshold_encoding_spike/T_200` | bool | 86.11% |
 
 ## 项目结构
 

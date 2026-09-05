@@ -27,35 +27,35 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 # 五种输入与对应数据目录、输入类型、是否归一化。
 DATA_TYPES = {
     "raw_polarity": {
-        "data_root": "CapgMyo_data/raw_polarity_binned/T_200/raw_polarity",
+        "data_root": "CapgMyo_data/raw_polarity_binned/T_200",
         "input_kind": "raw",
         "normalize": False,
         "label": "raw_polarity（无归一化）",
         "name": "Raw polarity",
     },
     "raw_polarity_norm": {
-        "data_root": "CapgMyo_data/raw_polarity_binned/T_200/raw_polarity",
+        "data_root": "CapgMyo_data/raw_polarity_binned/T_200",
         "input_kind": "raw",
         "normalize": True,
         "label": "raw_polarity（z-score 归一化）",
         "name": "Raw polarity (z-score)",
     },
     "neurophic_system_spike": {
-        "data_root": "CapgMyo_data/neurophic_system_encoding_spike/T_200/raw_polarity",
+        "data_root": "CapgMyo_data/neurophic_system_encoding_spike/T_200",
         "input_kind": "spike",
         "normalize": False,
         "label": "神经形态系统脉冲编码",
         "name": "Neuromorphic spike",
     },
     "delta_spike": {
-        "data_root": "CapgMyo_data/delta_encoding_spike/T_200_target_rate0.1/raw_polarity",
+        "data_root": "CapgMyo_data/delta_encoding_spike/T_200",
         "input_kind": "spike",
         "normalize": False,
         "label": "Delta 编码脉冲",
         "name": "Delta spike",
     },
     "threshold_spike": {
-        "data_root": "CapgMyo_data/threshold_encoding_spike/T_200_target_rate0.1/raw_polarity",
+        "data_root": "CapgMyo_data/threshold_encoding_spike/T_200",
         "input_kind": "spike",
         "normalize": False,
         "label": "Threshold 编码脉冲",
@@ -187,8 +187,24 @@ def write_summary(output_dir, config, best_epoch, best_val_accuracy, evaluation,
     (output_dir / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def main():
-    args = parse_args()
+def run_training(
+    data_type,
+    seed,
+    output_dir,
+    data_root=None,
+    batch_size=256,
+    eval_batch_size=256,
+    max_epochs=200,
+    widths=(24, 48, 96),
+    hidden=160,
+    pool=(4, 8),
+    tau=2.0,
+    lr=1e-3,
+    weight_decay=1e-4,
+    label_smoothing=0.05,
+    dropout=0.0,
+):
+    """训练一个 data_type + seed，把全部结果写入 output_dir，返回测试指标。"""
     if not torch.cuda.is_available():
         raise RuntimeError("CUDA 不可用，拒绝在 CPU 上启动正式训练")
 
@@ -197,34 +213,29 @@ def main():
     torch.backends.cudnn.allow_tf32 = True
     torch.set_float32_matmul_precision("high")
 
-    spec = DATA_TYPES[args.data_type]
-    data_root = args.data_root or (PROJECT_ROOT / spec["data_root"])
-    widths = parse_tuple(args.widths, 3, "widths")
-    pool = parse_tuple(args.pool, 2, "pool")
-
-    output_root = args.output_dir or (PROJECT_ROOT / "outputs" / args.data_type)
-    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = output_root.resolve() / run_id
-    output_dir.mkdir(parents=True, exist_ok=False)
+    spec = DATA_TYPES[data_type]
+    data_root = data_root or (PROJECT_ROOT / spec["data_root"])
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
     config = {
-        "data_type": args.data_type,
+        "data_type": data_type,
         "label": spec["label"],
         "name": spec["name"],
         "input_kind": spec["input_kind"],
         "normalize": spec["normalize"],
         "widths": list(widths),
-        "hidden": args.hidden,
+        "hidden": hidden,
         "pool": list(pool),
-        "tau": args.tau,
-        "lr": args.lr,
-        "weight_decay": args.weight_decay,
-        "label_smoothing": args.label_smoothing,
-        "dropout": args.dropout,
-        "seed": args.seed,
-        "batch_size": args.batch_size,
-        "eval_batch_size": args.eval_batch_size,
-        "max_epochs": args.max_epochs,
+        "tau": tau,
+        "lr": lr,
+        "weight_decay": weight_decay,
+        "label_smoothing": label_smoothing,
+        "dropout": dropout,
+        "seed": seed,
+        "batch_size": batch_size,
+        "eval_batch_size": eval_batch_size,
+        "max_epochs": max_epochs,
     }
     write_json(output_dir / "config.json", config)
 
@@ -235,10 +246,10 @@ def main():
     normalize_and_move(datasets, torch.device("cuda"), spec["input_kind"], spec["normalize"], normalization)
 
     device = datasets["train"]["data"].device
-    model = build_model(tuple(widths), args.tau, device, args.dropout, args.hidden, pool)
+    model = build_model(tuple(widths), tau, device, dropout, hidden, pool)
     config["parameter_count"] = count_parameters(model)
 
-    print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] 开始训练 {args.data_type}，参数量 {config['parameter_count']:,}", flush=True)
+    print(f"[{datetime.now():%Y-%m-%d %H:%M:%S}] 开始训练 {data_type} seed={seed}，参数量 {config['parameter_count']:,}", flush=True)
     history, best_epoch, best_val_accuracy = train_model(
         model, datasets, config, output_dir, config, normalization
     )
@@ -259,9 +270,48 @@ def main():
     write_summary(output_dir, config, best_epoch, best_val_accuracy, evaluation, per_subject)
 
     print(
-        f"[{datetime.now():%Y-%m-%d %H:%M:%S}] 完成：测试准确率 {evaluation['accuracy']:.2%}，"
-        f"输出目录 {output_dir}",
+        f"[{datetime.now():%Y-%m-%d %H:%M:%S}] 完成 {data_type} seed={seed}："
+        f"测试准确率 {evaluation['accuracy']:.2%}，输出目录 {output_dir}",
         flush=True,
+    )
+    return {
+        "data_type": data_type,
+        "seed": seed,
+        "test_accuracy": evaluation["accuracy"],
+        "test_correct": evaluation["correct"],
+        "test_total": evaluation["total"],
+        "best_val_accuracy": best_val_accuracy,
+        "best_epoch": best_epoch,
+        "parameter_count": config["parameter_count"],
+        "output_dir": str(output_dir),
+    }
+
+
+def main():
+    args = parse_args()
+    widths = parse_tuple(args.widths, 3, "widths")
+    pool = parse_tuple(args.pool, 2, "pool")
+
+    output_root = args.output_dir or (PROJECT_ROOT / "outputs" / args.data_type)
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_dir = output_root.resolve() / run_id
+
+    run_training(
+        args.data_type,
+        args.seed,
+        output_dir,
+        data_root=args.data_root,
+        batch_size=args.batch_size,
+        eval_batch_size=args.eval_batch_size,
+        max_epochs=args.max_epochs,
+        widths=widths,
+        hidden=args.hidden,
+        pool=pool,
+        tau=args.tau,
+        lr=args.lr,
+        weight_decay=args.weight_decay,
+        label_smoothing=args.label_smoothing,
+        dropout=args.dropout,
     )
 
 

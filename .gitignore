@@ -11,3 +11,6 @@ __pycache__/
 # 训练时按需编译的 CUDA 扩展与构建缓存
 *.so
 build/
+
+# 本地运行说明（不随仓库提交）
+/docs/multi_seed_experiment.md

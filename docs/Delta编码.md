@@ -43,11 +43,11 @@ TARGET_SPIKE_RATE = 0.10
 ## 输出
 
 ```text
-CapgMyo_data/delta_encoding_spike/T_200_target_rate0.1/raw_polarity/
+CapgMyo_data/delta_encoding_spike/T_200/
 ├── train/{subject_*}/sXX_gXX_rXX.pt
 ├── val/{subject_*}/sXX_gXX_rXX.pt
 ├── test/{subject_*}/sXX_gXX_rXX.pt
-└── manifest.json（位于 T_200_target_rate0.1 层）
+└── manifest.json（位于 T_200 层）
 ```
 
 输出 `data` 使用 `torch.bool`，shape 为 `[200, 2, 8, 16]`；文件名、被试目录与全部标签元数据保持不变。
