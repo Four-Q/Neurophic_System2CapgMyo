@@ -1,0 +1,26 @@
+{
+  "data_type": "raw_polarity",
+  "label": "raw_polarity（无归一化）",
+  "name": "Raw polarity",
+  "input_kind": "raw",
+  "normalize": false,
+  "widths": [
+    24,
+    48,
+    96
+  ],
+  "hidden": 160,
+  "pool": [
+    4,
+    8
+  ],
+  "tau": 2.0,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "label_smoothing": 0.05,
+  "dropout": 0.0,
+  "seed": 191664963,
+  "batch_size": 256,
+  "eval_batch_size": 256,
+  "max_epochs": 200
+}
