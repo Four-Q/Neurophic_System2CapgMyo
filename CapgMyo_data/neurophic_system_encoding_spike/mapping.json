@@ -1,0 +1,25 @@
+{
+  "version": "Vin",
+  "quantile_method": "high_resolution_histogram_refined_exact_linear",
+  "histogram_bins": 1048576,
+  "statistics_source": "CapgMyo_data/raw/train abs(raw)",
+  "probabilities": {
+    "low": 0.1,
+    "mid": 0.9,
+    "high": 0.995
+  },
+  "voltage_anchors_v": {
+    "zero": 1.0,
+    "on": 1.8639,
+    "mid": 2.4,
+    "max": 2.5
+  },
+  "q_low": 0.0013184176059439778,
+  "q_mid": 0.04745791144669059,
+  "q_high": 0.229681180492042,
+  "statistics_count": 129024000,
+  "raw_train_file_count": 1008,
+  "raw_source_manifest_sha256": "9bd3a1812d81287a63bcfc64d2d1b9ca4362a61e8964ce98a50532de6f253e5d",
+  "parameter_hash": "3f5e3b4e4eed3c6669ea2e8ff1de4d6d02ca248b0c946e4a6abfbcd25d061dfa",
+  "created_at_utc": "2026-09-05T02:07:22.021204+00:00"
+}
